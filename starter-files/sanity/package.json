@@ -1,10 +1,10 @@
 {
-  "name": "slicks-slices-backend",
+  "name": "modern-foo-backend",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Wes Bos <wesbos@gmail.com>",
+  "author": "Cade Holmes",
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint .",
