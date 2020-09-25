@@ -1,13 +1,10 @@
 import React from 'react';
-import Nav from '../components/Nav';
+import Layout from '../components/Layout';
 
-const FoolsPage = () => {
-    return (
-        <div>
-            <Nav />
-            <h1>Fools go here fuhl</h1>
-        </div>
-    )
-};
+const FoolsPage = () => (
+  <Layout>
+    <h1>Fools go here fuhl</h1>
+  </Layout>
+);
 
 export default FoolsPage;

@@ -1,11 +1,10 @@
 import React from 'react';
-import Nav from '../components/Nav';
+import Layout from '../components/Layout';
 
 const MerchPage = () => (
-  <div>
-    <Nav />
+  <Layout>
     <div>Merch</div>
-  </div>
+  </Layout>
 );
 
 export default MerchPage;

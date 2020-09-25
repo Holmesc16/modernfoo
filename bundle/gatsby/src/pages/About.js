@@ -1,13 +1,10 @@
 import React from 'react';
-import Nav from '../components/Nav';
+import Layout from '../components/Layout';
 
-const AboutPage = () => {
-    return (
-        <div>
-            <Nav />
-            <h1>About Modern Foos</h1>
-        </div>
-    )
-};
+const AboutPage = () => (
+  <Layout>
+    <h1>About Modern Foos</h1>
+  </Layout>
+);
 
 export default AboutPage;

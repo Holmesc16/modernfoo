@@ -1,11 +1,10 @@
 import React from 'react';
-import Nav from '../components/Nav';
+import Layout from '../components/Layout';
 
 const OrderPage = () => (
-  <div>
-    <Nav />
+  <Layout>
     <div>Orders</div>
-  </div>
+  </Layout>
 );
 
 export default OrderPage;
