@@ -1,10 +1,12 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-const OrderPage = () => (
-  <Layout>
-    <div>Orders</div>
-  </Layout>
-);
+const OrderPage = () => {
+    return (
+        <>
+            <p>Order page</p>
+        </>
+    )
+}
 
 export default OrderPage;

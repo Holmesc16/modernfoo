@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-const MerchPage = () => {
+const FoosPage = () => {
     return (
         <>
-            <p>Merch goes here for sale fuhl</p>
+            <p>Fuhls go here</p>
         </>
     )
 }
 
-export default MerchPage
+export default FoosPage;
