@@ -17,7 +17,22 @@ export default {
             name: 'type',
             title: 'Merch Type',
             type: 'string',
-            description: 'Type of merch (shirt, sticker, bandana, etc.)'
+            description: 'Type of merch (shirt, sticker, bandana, etc.)',
+            options: {
+                list: [
+                    { title: 'Shirt', value: 'shirt' },
+                    { title: 'Hat', value: 'hat' },
+                    { title: 'Sticker', value: 'sticker' },
+                    { title: 'Outerwear', value: 'outerwear' },
+                    { title: 'Socks', value: 'socks' },
+                    { title: 'Air Freshener', value: 'air-freshener' },
+                    { title: 'Keychain', value: 'keychain' },
+                    { title: 'Lanyard', value: 'lanyard' },
+                    { title: 'Coaster', value: 'coaster' },
+                    { title: 'Koozie', value: 'koozie' },
+                    { title: 'Skateboard Deck', value: 'skateboard-deck' }
+                ]
+            }
         },
         {
             name: 'slug',
@@ -53,7 +68,7 @@ export default {
         {
             name: 'stock',
             title: 'Stock',
-            type: 1,
+            type: 'number',
             description: 'Available stock for this merch item',
             validation: Rule => Rule.max(99)
         }
