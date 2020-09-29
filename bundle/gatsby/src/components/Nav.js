@@ -20,6 +20,7 @@ const StyledNav = styled.nav`
     }
     li {
         order: 1;
+        max-height:8em;
     }
     a {
         font-size: 3rem;
