@@ -2,11 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 import 'normalize.css';
 
-import Nav from './Nav'
-import Footer from './Footer'
-import GlobalStyles from '../styles/GlobalStyles'
-import Typography from '../styles/Typography'
-import stripes from '../assets/images/stripes.svg'
+import Nav from './Nav';
+import Footer from './Footer';
+import GlobalStyles from '../styles/GlobalStyles';
+import Typography from '../styles/Typography';
 
 const StyledBorder = styled.div`
     max-width: 1000px;
@@ -20,6 +19,7 @@ const StyledBorder = styled.div`
         margin-left: 1.5rem;d
         margin-right: 1.5rem;
     } */
+    
 `
 
 const StyledContent = styled.div`

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import bg from '../assets/images/cosas.png';
 import stripes from '../assets/images/stripes.svg';
+import border from '../assets/images/borders/border_transparent_plum.svg';
 
 const GlobalStyles = createGlobalStyle`
     :root {
@@ -17,10 +18,17 @@ const GlobalStyles = createGlobalStyle`
         background-size: 950px;
         background-attachment: fixed;
         font-size: 10px;
+        border-image: url(${border}) 25% 30% 10% 20% repeat;
     }
 
     body {
         font-size: 2rem;
+        /* background: white; */
+        /* box-shadow: 0 0 3px 5px rgba(0,0,0,0.044); */
+        margin-bottom: 3rem;
+        border: 50px solid transparent;
+        border-image: url(${border}) 25% 30% 10% 20% repeat;
+        border-image-slice: 65;
     }
 
     fieldset {
@@ -36,6 +44,7 @@ const GlobalStyles = createGlobalStyle`
         border-radius: 2px;
         cursor: pointer;
         --cast: 2px;
+        // font-family: 'Fenwick';
         box-shadow: var(--cast) var(--cast) 0 var(--plum);
         text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
         transition: all 0.2s;
