@@ -6,7 +6,7 @@ const StyledWrapper = styled.div`
     flex-direction:row;
     flex-wrap:wrap;
     max-height: 100vw;
-    height:500px;
+    // height:500px;
 
     align-items: center;
     .box {
@@ -65,23 +65,27 @@ const StyledWrapper = styled.div`
         background: rgba(20, 10, 120, 0.2);
         height:150px;
     }
-
+    .num {
+        padding: 20px;
+        display: flex;
+        margin: 10px;
+    }
 `
 
 const Flexbox = () => {
     return (
         <StyledWrapper className="wrapper">
-            <div className="box box-0">0</div>
-            <div className="box box-1">1</div>
-            <div className="box box-2">2</div>
-            <div className="box box-3">3</div>
-            <div className="box box-4">4</div>
-            <div className="box box-5">5</div>
-            <div className="box box-6">6</div>
-            <div className="box box-7">7</div>
-            <div className="box box-8">8</div>
-            <div className="box box-9">9</div>
-            <div className="box box-10">10</div>
+            <div className="box box-0"><div className="num">0</div></div>
+            <div className="box box-1"><div className="num">1</div></div>
+            <div className="box box-2"><div className="num">2</div></div>
+            <div className="box box-3"><div className="num">3</div></div>
+            <div className="box box-4"><div className="num">4</div></div>
+            <div className="box box-5"><div className="num">5</div></div>
+            <div className="box box-6"><div className="num">6</div></div>
+            <div className="box box-7"><div className="num">7</div></div>
+            <div className="box box-8"><div className="num">8</div></div>
+            <div className="box box-9"><div className="num">9</div></div>
+            <div className="box box-10"><div className="num">10</div></div>
         </StyledWrapper>
     )
 }
