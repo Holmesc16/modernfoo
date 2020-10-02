@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
         border: 50px solid transparent;
         border-image: url(${border}) 25% 30% 10% 20% repeat;
         border-image-slice: 65;
+        min-height: 100vh;
     }
 
     fieldset {
