@@ -1,21 +1,20 @@
 /* eslint-disable react/destructuring-assignment */
 import { graphql } from 'gatsby';
 import React from 'react';
-import MerchList from '../components/MerchList';
+import MerchList from '../components/Lists/MerchList';
 
 const MerchPage = (props) => {
   const { merch } = props.data;
-  console.log(merch);
   return (
     <>
       <p>Merch goes here for sale fuhl</p>
-      <MerchList />
+      <MerchList merch={merch} />
     </>
   );
 };
 
 export const query = graphql`
-  query merchQuery {
+  query merch {
     merch: allSanityMerch {
       nodes {
         id

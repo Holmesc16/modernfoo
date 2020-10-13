@@ -1,6 +1,7 @@
 import React from 'react';
 
 const FooList = props => {
+    console.log(props)
     return (
         <>
             <div>

@@ -1,19 +1,19 @@
 import React from 'react';
-import FooList from '../components/FooList';
 import { graphql } from 'gatsby';
+import FooList from '../components/Lists/FooList';
 
-const FoosPage = props => {
-    console.log(props.data)
+const FoosPage = (props) => {
+  const { foos } = props.data;
   return (
     <>
-      <FooList />
+      <FooList foos={foos} />
     </>
   );
 };
 
 export const query = graphql`
-  query fooQuery {
-    allSanityPerson {
+  query foos {
+    foos: allSanityPerson {
       nodes {
         description
         id
