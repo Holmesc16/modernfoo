@@ -1,12 +1,36 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import FooList from '../components/FooList';
+import { graphql } from 'gatsby';
 
-const FoosPage = () => {
-    return (
-        <>
-            <p>Fuhls go here</p>
-        </>
-    )
-}
+const FoosPage = props => {
+    console.log(props.data)
+  return (
+    <>
+      <FooList />
+    </>
+  );
+};
+
+export const query = graphql`
+  query fooQuery {
+    allSanityPerson {
+      nodes {
+        description
+        id
+        slug {
+          current
+        }
+        name
+        image {
+          asset {
+            fluid(maxWidth: 400) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default FoosPage;

@@ -30,7 +30,7 @@ export default {
             }
         },
         {
-            name: 'desription',
+            name: 'description',
             title: 'Description',
             type: 'text',
             description: 'Describe the person'

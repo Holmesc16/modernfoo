@@ -1,14 +1,15 @@
+/* eslint-disable react/destructuring-assignment */
 import { graphql } from 'gatsby';
 import React from 'react';
-import Layout from '../components/Layout';
 import MerchList from '../components/MerchList';
 
 const MerchPage = (props) => {
-  console.log(props);
+  const { merch } = props.data;
+  console.log(merch);
   return (
     <>
-          <p>Merch goes here for sale fuhl</p>
-          <MerchList></MerchList>
+      <p>Merch goes here for sale fuhl</p>
+      <MerchList />
     </>
   );
 };
