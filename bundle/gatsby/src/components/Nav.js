@@ -52,7 +52,7 @@ const Nav = () => {
                 </Link>
             </li>
             <li>
-                <Link to="/merch">Merch</Link>
+                <Link to="/Merch">Merch</Link> {/* update to /merch */}
             </li>
             <li>
                 <Link to="/foos">Foos</Link>

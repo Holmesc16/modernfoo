@@ -22,6 +22,7 @@ const Typography = createGlobalStyle`
         font-family: Fenwick, display, cursive, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: normal;
         margin:0;
+        font-size: 60px;
         letter-spacing: 0.5px;
     }
     a {
