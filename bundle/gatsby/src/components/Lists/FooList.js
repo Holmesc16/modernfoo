@@ -1,6 +1,8 @@
 import React from 'react';
 
-const FooList = ({ foos }) => {
+const FooList = props => {
+    const { foos } = props
+    console.log(props)
     return (
         <>
             <div>
