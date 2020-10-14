@@ -1,9 +1,25 @@
 import React from 'react';
+import { Link } from 'gatsby'
 
-const MerchList = (props) => {
+const MerchItem = ({ item }) => {
     return (
+        <div>
+            <Link to={`/merch/${item.slug.current}`} >
+                <h3>
+                    <span className="mark">{item.name}</span>
+                </h3>
+            </Link>
+        </div>
+    )
+}
+
+const MerchList = props => {
+   const { merch } = props
+    console.log(props)
+   return (
         <>
-            <h1>Merch will be listed here fuhl</h1>
+            <h1>Available Merchandise</h1>
+            {merch.nodes.map(m => <MerchItem item={m} key={m.id}/>)}
         </>
     );
 };

@@ -7,7 +7,6 @@ const MerchPage = (props) => {
   const { merch } = props.data;
   return (
     <>
-      <p>Merch goes here for sale fuhl</p>
       <MerchList merch={merch} />
     </>
   );
@@ -32,6 +31,7 @@ export const query = graphql`
         price
         stock
         type
+        description
       }
     }
   }

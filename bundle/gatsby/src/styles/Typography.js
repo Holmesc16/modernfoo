@@ -18,7 +18,7 @@ const Typography = createGlobalStyle`
         font-family: ChivoItalic, -apple--apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         color: var(--black);
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1 {
         font-family: Fenwick, display, cursive, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: normal;
         margin:0;
@@ -31,10 +31,11 @@ const Typography = createGlobalStyle`
     }
     mark, .mark {
         background: var(--plum);
-        padding: 0 2px 2px 2px;
+        padding: 0 4px 4px 4px;
         margin: 0;
         display: inline;
         line-height: 1;
+        color:white;
     }
 
     .center {
