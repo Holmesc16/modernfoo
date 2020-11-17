@@ -2,11 +2,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import MerchList from '../components/Lists/MerchList';
+import MerchFilter from '../components/MerchFilter';
 
 const MerchPage = (props) => {
   const { merch } = props.data;
   return (
     <>
+      <MerchFilter />
       <MerchList merch={merch} />
     </>
   );

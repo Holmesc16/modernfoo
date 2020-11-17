@@ -30,7 +30,8 @@ export default {
                     { title: 'Lanyard', value: 'lanyard' },
                     { title: 'Coaster', value: 'coaster' },
                     { title: 'Koozie', value: 'koozie' },
-                    { title: 'Skateboard Deck', value: 'skateboard-deck' }
+                    { title: 'Skateboard Deck', value: 'skateboard-deck' },
+                    { title: 'Coronavirus Masks', value: 'coronavirus-masks'}
                 ]
             }
         },
@@ -69,6 +70,15 @@ export default {
             type: 'number',
             description: 'Available stock for this merch item',
             validation: Rule => Rule.max(99)
+        },
+        {
+            name: 'tags',
+            name: 'Tags',
+            type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                layout: 'tags'
+            }
         }
     ]
 };
