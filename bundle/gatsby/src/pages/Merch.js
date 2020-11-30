@@ -6,10 +6,11 @@ import MerchFilter from '../components/MerchFilter';
 
 const MerchPage = (props) => {
   const { merch } = props.data;
+  const merchFilter = window.location.search.replace(/[?=]|type/gim, '');
   return (
     <>
-      <MerchFilter />
-      <MerchList merch={merch} />
+      <MerchFilter filter={merchFilter} />
+      <MerchList merch={merch} filter={merchFilter} />
     </>
   );
 };

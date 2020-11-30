@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-prototype-builtins */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable guard-for-in */
 import React from 'react';
@@ -25,12 +27,15 @@ const MerchTypesStyles = styled.div`
       padding: 2px 5px;
       color: var(--plum);
     }
-    .active {
-      background: var(--grey);
+    .clear {
+      background: crimson;
     }
   }
+  .active-type {
+    background: var(--white);
+    color: var(--grey);
+  }
 `;
-
 const countOfTypes = (types) => {
   const obj = {};
   const arr = [];
@@ -39,14 +44,14 @@ const countOfTypes = (types) => {
     .forEach((type) =>
       obj.hasOwnProperty(type) ? obj[type]++ : (obj[type] = 1)
     );
-  for (let key in obj) {
+  for (const key in obj) {
     arr.push({ type: key, count: obj[key] });
   }
   return arr;
 };
 
-const MerchFilter = () => {
-  // get list of all merch types
+const MerchFilter = (props) => {
+  const { filter } = props;
   const { types } = useStaticQuery(graphql`
     query {
       types: allSanityMerch {
@@ -60,11 +65,27 @@ const MerchFilter = () => {
   return (
     <MerchTypesStyles>
       {countOfTypes(types).map((merchType, index) => (
-        <Link to={`/merch/type/${merchType.type}`} key={index}>
+        <Link
+          to={`?type=${merchType.type}`}
+          key={index}
+          className={
+            merchType.type ===
+            window.location.search.replace(/[?=]|type/gim, '')
+              ? 'active-type'
+              : ''
+          }
+        >
           <span className="name">{merchType.type}</span>
           <span className="count">{merchType.count}</span>
         </Link>
       ))}
+      {filter ? (
+        <Link to="/Merch" className="clear">
+          <span className="clear-filter">&#10005;</span>
+        </Link>
+      ) : (
+        ''
+      )}
     </MerchTypesStyles>
   );
 };

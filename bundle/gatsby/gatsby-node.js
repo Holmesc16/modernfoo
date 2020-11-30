@@ -1,8 +1,8 @@
 import path from 'path';
 
-async function flipMerchToPages({ graphql, actions }) {
-  const merchTemplate = path.resolve('./src/templates/Merch.js');
+const template = path.resolve('./src/templates/Merch.js');
 
+async function flipMerchToPages({ graphql, actions }) {
   const { data } = await graphql(`
     query {
       merch: allSanityMerch {
@@ -18,7 +18,7 @@ async function flipMerchToPages({ graphql, actions }) {
   data.merch.nodes.forEach((merchItem) => {
     actions.createPage({
       path: `merch/${merchItem.slug.current}/`,
-      component: merchTemplate,
+      component: template,
       context: {
         slug: merchItem.slug.current,
         item: merchItem.name,

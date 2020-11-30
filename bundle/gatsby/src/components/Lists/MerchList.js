@@ -35,14 +35,17 @@ const MerchItem = ({ item }) => (
 );
 
 const MerchList = (props) => {
-  const { merch } = props;
+  const { merch, filter } = props;
+  console.log('filter', filter);
   return (
     <>
       <h1>Available Merchandise</h1>
       <MerchGridStyles className="merch">
-        {merch.nodes.map((m) => (
-          <MerchItem item={m} key={m.id} />
-        ))}
+        {merch.nodes
+          .filter((m) => (filter ? m.type === filter : m))
+          .map((m) => (
+            <MerchItem item={m} key={m.id} />
+          ))}
       </MerchGridStyles>
     </>
   );
