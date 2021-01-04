@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import Layout from '../components/Layout';
 import foo from '../assets/images/foo_1.png';
 
-const HomePage = props => {
+const HomePage = (props) => {
+  const [hasEnteredSecretPassword, setHasEnteredSecretPassword] = useState(
+    false
+  );
+
   return (
     <div>
-      <button>What's good fuhl</button>
+      <button type="submit">What's good fuhl</button>
     </div>
   );
 };

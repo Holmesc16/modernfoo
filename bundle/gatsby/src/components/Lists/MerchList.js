@@ -21,6 +21,9 @@ const MerchStyles = styled.div`
   span {
     margin: 0;
   }
+  .third-party {
+    
+  }
 `;
 
 const MerchItem = ({ item }) => (
@@ -36,16 +39,20 @@ const MerchItem = ({ item }) => (
 
 const MerchList = (props) => {
   const { merch, filter } = props;
-  console.log('filter', filter);
   return (
     <>
-      <h1>Available Merchandise</h1>
+      <h1>Limited Merchandise</h1>
       <MerchGridStyles className="merch">
         {merch.nodes
           .filter((m) => (filter ? m.type === filter : m))
           .map((m) => (
             <MerchItem item={m} key={m.id} />
           ))}
+        {/* <Link to="/merch/other">
+          <button type="submit" className="third-party">
+            Third Party Sellers &rArr;
+          </button>
+        </Link> */}
       </MerchGridStyles>
     </>
   );

@@ -3,12 +3,14 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import MerchList from '../components/Lists/MerchList';
 import MerchFilter from '../components/MerchFilter';
+import Pagination from '../components/Pagination';
 
 const MerchPage = (props) => {
   const { merch } = props.data;
   const merchFilter = window.location.search.replace(/[?=]|type/gim, '');
   return (
     <>
+      {/* <Pagination /> */}
       <MerchFilter filter={merchFilter} />
       <MerchList merch={merch} filter={merchFilter} />
     </>

@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import CheckoutButton from '../components/CheckoutButton';
 
 const MerchGrid = styled.div`
   display: grid;
@@ -27,8 +28,9 @@ export default function SingleMerchItemPage({ data }) {
         </ul>
         <h3>{merch.price}</h3>
         <p>{merch.description}</p>
-        <button type="submit" onClick={() => console.log('clicked')}>
-          Add To Cart
+        {/* <CheckoutButton /> */}
+        <button onClick={() => console.log('clicked')}>
+          Purchase
         </button>
       </div>
     </MerchGrid>
