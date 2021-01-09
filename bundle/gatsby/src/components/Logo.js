@@ -1,19 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import stripes from '../assets/images/stripes.svg';
-import LogoImage from '../assets/images/Logo.svg'; //foo_1.png
+import LogoImage from '../assets/images/Logo.svg';
 
 const StyledLogo = styled.div`
   font-size: 6px;
   font-size: clamp(1px, 0.65vw, 8px);
   width: 30rem;
-  height: 30rem;
+  height: 14rem;
   box-shadow: 0 0 10px rgba(var(--plum));
   margin: 0;
   --borderSize: 1em;
-  /* background: white url(${stripes}) */
-  /* background-size: 150em; */
-  /* border: var(--borderSize) solid white; */
   display: flex;
   .inner {
     margin: var(--borderSize);
