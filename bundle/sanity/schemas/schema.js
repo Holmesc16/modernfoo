@@ -6,11 +6,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import merch from './merch'
 import persons from './persons'
+import users from './users'
+import secrets from './secrets'
 
 export default createSchema({
   // We name our schema
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([merch, persons]),
+  types: schemaTypes.concat([merch, persons,users,secrets]),
 });
