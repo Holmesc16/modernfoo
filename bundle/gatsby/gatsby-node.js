@@ -149,6 +149,26 @@ async function flipMerchToPages({ graphql, actions }) {
   });
 }
 
+async function getPageLoginSecret({ graphql, actions }) {
+  const { data } = await graphql(`
+    {
+      postgres {
+        allModernfoosecrets {
+          nodes {
+            createdby
+            expiresin
+            id
+            iscurrent
+            nodeId
+            secret
+          }
+        }
+      }
+    }
+  `);
+  console.log(data);
+}
+
 export async function createPages(params) {
   await Promise.all([flipMerchToPages(params)]);
 }

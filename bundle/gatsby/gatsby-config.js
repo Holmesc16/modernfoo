@@ -2,6 +2,8 @@
 import dotenv from 'dotenv';
 
 dotenv.config({ path: '.env' });
+// @TODO - remove later
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 export default {
   siteMetadata: {
@@ -18,6 +20,14 @@ export default {
         dataset: 'production',
         watchMode: true,
         token: process.env.SANITY_TOKEN,
+      },
+    },
+    {
+      resolve: 'gatsby-source-pg',
+      options: {
+        connectionString: process.env.POSTGRES_CXN_STRING,
+        schema: 'public',
+        refetchInterval: 60,
       },
     },
   ],
